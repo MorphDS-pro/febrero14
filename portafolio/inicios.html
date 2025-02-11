@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicios - Portafolio de Amor</title>
+  <style>
+    #inicio {
+      padding: 20px;
+    }
+
+    #daysCount {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff69b4;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ff69b4;
+      margin-top: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .gallery-item {
+      width: 280px;
+      position: relative;
+    }
+
+    .gallery-item img, .gallery-item video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .gallery-description {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Estilos para pantallas pequeñas */
+    @media (max-width: 768px) {
+      #daysCount {
+        font-size: 1rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .gallery-item {
+        width: 100%;
+        max-width: 400px; /* Limita el tamaño máximo */
+      }
+
+      .gallery-description {
+        font-size: 0.8rem; /* Ajuste del tamaño de texto */
+        padding: 8px;
+      }
+    }
+
+    /* Estilos para pantallas muy pequeñas (por ejemplo, teléfonos en modo retrato) */
+    @media (max-width: 480px) {
+      #daysCount {
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .gallery-item {
+        width: 100%;
+        max-width: 300px; /* Limita el tamaño máximo aún más */
+      }
+
+      .gallery-description {
+        font-size: 0.7rem; /* Ajuste aún más del tamaño de texto */
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <section id="inicio" class="content-section active">
+        <h2>¡Bienvenida Mi Amor!</h2>
+        <p id="daysCount"></p>
+        <br>
+      
+        <h2>Así comenzó todo:</h2>
+      
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="portafolio/modulos/inicios/img-m01.jpg" alt="Descripción de la foto 1">
+            <div class="gallery-description">
+              <p>Mi primera vez en el 32C</p>
+              <p>❤️ (03-05-2022)❤️</p>
+            </div>
+          </div>
+      
+          <div class="gallery-item">
+            <img src="portafolio/modulos/inicios/img-m02.jpg" alt="Descripción de la foto 2">
+            <div class="gallery-description">
+              <p>Nuestra primera foto juntos</p>
+              <p>❤️ (18-05-2022) ❤️</p>
+            </div>
+          </div>
+      
+          <div class="gallery-item">
+            <img src="portafolio/modulos/inicios/img-m03.jpg" alt="Descripción de la foto 3">
+            <div class="gallery-description">
+              <p>El primer regalo para ti</p>
+              <p>❤️ (24-05-2022) ❤️</p>
+            </div>
+          </div>
+      
+          <div class="gallery-item">
+            <img src="portafolio/modulos/inicios/img-m04.jpg" alt="Descripción de la foto 4">
+            <div class="gallery-description">
+              <p>Nuestra primera mascota</p>
+              <p>❤️ (10-06-2022) ❤️</p>
+            </div>
+          </div>
+      
+          <div class="gallery-item">
+            <video autoplay loop muted playsinline>
+              <source src="portafolio/modulos/inicios/vd-m05.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de videos.
+            </video>
+            <div class="gallery-description">
+              <p>Una mágica noche de nieve</p>
+              <p>❤️ (13-07-2022) ❤️</p>
+            </div>
+          </div>
+      
+          <div class="gallery-item">
+            <img src="portafolio/modulos/inicios/img-m06.jpg" alt="Descripción de la foto 5">
+            <div class="gallery-description">
+              <p>Nuestro primer paseo juntos</p>
+              <p>❤️ (27-08-2022) ❤️</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="portafolio/modulos/inicios/img-m07.jpg" alt="Descripción de la foto 5">
+            <div class="gallery-description">
+              <p>Primer día de pololeo</p>
+              <p>❤️ (05-04-2024) ❤️</p>
+            </div>
+          </div>
+        </div>
+    </section>
+      
+  <script>
+    const startDate = new Date('2024-04-04'); 
+    const currentDate = new Date();
+    const timeDiff = currentDate - startDate;
+    const daysCount = Math.floor(timeDiff / (1000 * 3600 * 24)); 
+
+    document.getElementById('daysCount').innerText = `Han pasado ${daysCount} días desde que comenzó nuestra historia de amor.`;
+  </script>
+</body>
+</html>
