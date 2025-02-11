@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería Uniforme</title>
+  <style>
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    /* Contenedor de la galería en grid */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    /* Tarjeta para cada elemento multimedia */
+    .photo-frame {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .photo-frame:hover {
+      transform: translateY(-5px);
+    }
+    
+    /* Contenedor de medios con aspecto fijo (cuadrado) */
+    .media-container {
+      width: 100%;
+      position: relative;
+      padding-top: 100%; /* Para un cuadrado (1:1). Cambia este valor para otros ratios, por ejemplo, 56.25% para 16:9 */
+      background-color: #da8ccd;
+    }
+    
+    /* Las imágenes y videos se adaptan sin recortarse */
+    .media-container img,
+    .media-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    /* Descripción debajo del contenido multimedia */
+    .photo-description {
+      padding: 15px;
+      text-align: center;
+      background: #f9f9f9;
+      border-top: 1px solid #eee;
+      font-size: 1rem;
+    }
+    
+    /* Responsive para dispositivos pequeños */
+    @media (max-width: 600px) {
+      .gallery-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Galería Uniforme</h1>
+  <div class="gallery-container">
+
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <video src="portafolio/modulos/nuestrasFotos/0230813_img01.mp4" autoplay loop muted controls>
+          Tu navegador no soporta el formato de video.
+        </video>
+      </div>
+      <div class="photo-description">Caminando</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20220719_img02.jpg" alt="Saliendo a escondidas">
+      </div>
+      <div class="photo-description">Saliendo a escondidas</div>
+    </div>
+    
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20220807_img03.jpg" alt="Caminata al cerro con covid y lluvia">
+      </div>
+      <div class="photo-description">Caminata al cerro con covid y lluvia</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20221120_img04.jpg" alt="Paseo en avioneta">
+      </div>
+      <div class="photo-description">Paseo en avioneta</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20221127_img05.jpg" alt="Día de feria">
+      </div>
+      <div class="photo-description">Día de feria</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230115_img06.jpg" alt="Paseo por el parque">
+      </div>
+      <div class="photo-description">Paseo por el parque</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230218_img07.jpg" alt="Almuerzo en Cúrico">
+      </div>
+      <div class="photo-description">Almuerzo en Cúrico</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230218_img08.jpg" alt="Nuestra mascota en Cúrico">
+      </div>
+      <div class="photo-description">Nuestra mascota en Cúrico</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230226_img09.jpg" alt="Casa de los goros">
+      </div>
+      <div class="photo-description">Casa de los goros</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230308_img10.jpg" alt="Día de la nutri">
+      </div>
+      <div class="photo-description">Día de la nutri</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230317_img11.jpg" alt="Saliendo del 32C">
+      </div>
+      <div class="photo-description">Saliendo del 32C</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230318_img12.jpg" alt="Fotito en el ascensor">
+      </div>
+      <div class="photo-description">Fotito en el ascensor</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230401_img13.jpg" alt="Viajando por primera vez a conce">
+      </div>
+      <div class="photo-description">Viajando por primera vez a conce</div>
+    </div>
+
+    <div class="photo-frame">
+      <div class="media-container">
+          <img src="portafolio/modulos/nuestrasFotos/20230404_img14.jpg" alt="Descripción Foto 14">
+      </div>
+      <div class="photo-description">Tarde de spa</div>
+  </div>
+  
+  <div class="photo-frame">
+      <div class="media-container">
+          <img src="portafolio/modulos/nuestrasFotos/20230409_img15.jpg" alt="Descripción Foto 16">
+      </div>
+      <div class="photo-description">Tu primera vez en colectivo</div>
+  </div>
+  
+  <div class="photo-frame">
+      <div class="media-container">
+          <img src="portafolio/modulos/nuestrasFotos/20230511_img17.jpg" alt="Descripción Foto 17">
+      </div>
+      <div class="photo-description">Un día de lluvia</div>
+  </div>
+  
+  <div class="photo-frame">
+      <div class="media-container">
+          <img src="portafolio/modulos/nuestrasFotos/20230512_img18.jpg" alt="Descripción Foto 18">
+      </div>
+      <div class="photo-description">Viajando en bus</div>
+  </div>
+
+  <div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230520_img19.heic" alt="Descripción Foto 19">
+    </div>
+    <div class="photo-description">En la terraza</div>
+</div>
+
+<div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230613_img20.jpg" alt="Descripción Foto 20">
+    </div>
+    <div class="photo-description">Siesta con el perro Simon</div>
+</div>
+
+<div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20230805_img21.jpg" alt="Descripción Foto 21">
+    </div>
+    <div class="photo-description">Día con mucho sueño</div>
+</div>
+
+<div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20231007_img22.jpg" alt="Descripción Foto 22">
+    </div>
+    <div class="photo-description">Nuestro primer paseo con el perro Simon</div>
+</div>
+
+<div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20231014_img23.jpg" alt="Descripción Foto 23">
+    </div>
+    <div class="photo-description">Día de safari</div>
+</div>
+
+<div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20231119_img24.jpg" alt="Descripción Foto 24">
+    </div>
+    <div class="photo-description">Tarde de skincare</div>
+</div>
+
+<div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20231122_img25.jpg" alt="Descripción Foto 25">
+    </div>
+    <div class="photo-description">Un cafecito con las mejores</div>
+</div>
+
+<div class="photo-frame">
+    <div class="media-container">
+        <img src="portafolio/modulos/nuestrasFotos/20231131_img26.jpg" alt="Descripción Foto 26">
+    </div>
+    <div class="photo-description">Feliz Halloween</div>
+</div>
+
+
+<div class="photo-frame">
+  <div class="media-container">
+      <img src="portafolio/modulos/nuestrasFotos/20240116_img27.jpg" alt="Descripción Foto 27">
+  </div>
+  <div class="photo-description">Tarde de piscina en Corinto</div>
+</div>
+
+<div class="photo-frame">
+  <div class="media-container">
+      <img src="portafolio/modulos/nuestrasFotos/20240406_img28.jpg" alt="Descripción Foto 28">
+  </div>
+  <div class="photo-description">Nuestro primer paseo de pololos</div>
+</div>
+
+<div class="photo-frame">
+  <div class="media-container">
+      <img src="portafolio/modulos/nuestrasFotos/20240406_img29.jpg" alt="Descripción Foto 29">
+  </div>
+  <div class="photo-description">En Tomé</div>
+</div>
+
+<div class="photo-frame">
+  <div class="media-container">
+      <img src="portafolio/modulos/nuestrasFotos/20240706_img30.jpg" alt="Descripción Foto 30">
+  </div>
+  <div class="photo-description">Campo de los goros</div>
+</div>
+
+<div class="photo-frame">
+  <div class="media-container">
+      <img src="portafolio/modulos/nuestrasFotos/20250101_img31.jpg" alt="Descripción Foto 31">
+  </div>
+  <div class="photo-description">Feliz año nuevo con la ñora</div>
+</div>
+
+<div class="photo-frame">
+  <div class="media-container">
+      <img src="portafolio/modulos/nuestrasFotos/20250110_img32.jpg" alt="Descripción Foto 32">
+  </div>
+  <div class="photo-description">Tarde de piscina</div>
+</div>
+
+<div class="photo-frame">
+  <div class="media-container">
+      <img src="portafolio/modulos/nuestrasFotos/img-modulo4-ft17.jpg" alt="Descripción Foto 33">
+  </div>
+  <div class="photo-description">El filtro que más te gusta</div>
+</div>
+
+<div class="photo-frame">
+  <div class="media-container">
+      <video src="portafolio/modulos/nuestrasFotos/28261102_191324_698 Copiar.mp4" autoplay loop muted>
+          Tu navegador no soporta el formato de video.
+      </video>
+  </div>
+  <div class="photo-description">Días bonitos</div>
+</div>
+
+  </div>
+</body>
+</html>
