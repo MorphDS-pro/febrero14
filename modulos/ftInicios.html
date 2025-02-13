@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Línea de Tiempo - Inicios</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff4081;
+      font-size: 3em;
+      margin: 50px 0;
+      text-shadow: 2px 2px 5px rgba(255, 0, 128, 0.6);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 30px;
+      height: 600px; /* Altura fija para escritorio */
+      overflow-y: scroll;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #ff4081;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-item .timeline-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 45%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .timeline-item .timeline-date {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #ff4081;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item .timeline-description {
+      font-size: 1em;
+      color: #555;
+    }
+
+    .timeline-item .timeline-icon {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: #ff4081;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .timeline-item:nth-child(even) .timeline-icon {
+      left: auto;
+      right: 50%;
+    }
+
+    .timeline-item .timeline-media {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .timeline-item .timeline-media video {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    /* Ajustes para pantallas más pequeñas */
+    @media (max-width: 768px) {
+      .timeline {
+        height: auto; /* se ajusta al contenido */
+        padding: 20px;
+      }
+      h2 {
+        font-size: 2.5em;
+        margin: 30px 0;
+      }
+      .timeline-item {
+        flex-direction: column;
+        align-items: center;
+      }
+      .timeline-item .timeline-content {
+        width: 90%;
+      }
+      /* Posicionar la línea y el ícono a la izquierda */
+      .timeline::after {
+        left: 20px;
+        margin-left: 0;
+      }
+      .timeline-item .timeline-icon {
+        left: 20px;
+        transform: none;
+      }
+      .timeline-item:nth-child(even) .timeline-icon {
+        right: auto;
+        left: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 2em;
+      }
+      .timeline-item .timeline-date {
+        font-size: 1em;
+      }
+      .timeline-item .timeline-description {
+        font-size: 0.9em;
+      }
+
+      .timeline-item .timeline-media,
+      .timeline-item .timeline-media video {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <h2>Línea de Tiempo - Nuestros Inicios 💖</h2>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-icon">&#10084;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">03 mayo 2022</div>
+                <div class="timeline-description">
+                    Mi primera vez en el 32C.
+                </div>
+                <img class="timeline-media" src="modulos/img/inicios/img-m01.jpg" alt="Foto de San Valentín">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128154;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">18 Mayo 2022</div>
+                <div class="timeline-description">
+                    Está fue nuestra primera foto juntos.
+                </div>
+                <img class="timeline-media" src="modulos/img/inicios/img-m02.jpg" alt="Anillo de Compromiso">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128525;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">24 Mayo 2022</div>
+                <div class="timeline-description">
+                    Este mue el primer regalo que te hice.
+                </div>
+                <img class="timeline-media" src="modulos/img/inicios/img-m03.jpg" alt="Navidad 2023">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128515;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">10 Junio 2022</div>
+                <div class="timeline-description">
+                    Nuestra primera mascota.
+                </div>
+                <img class="timeline-media" src="modulos/img/inicios/img-m04.jpg" alt="Aniversario 2024">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#127881;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">13 Julio 2022</div>
+                <div class="timeline-description">
+                    Una mágina noche de nieve.
+                </div>
+                <video class="timeline-media" autoplay loop muted>
+                    <source src="modulos/img/inicios/vd-m05.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128515;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">27 Agosto 2022</div>
+                <div class="timeline-description">
+                    El primer paseo juntos.
+                </div>
+                <img class="timeline-media" src="modulos/img/inicios/img-m06.jpg" alt="Aniversario 2024">
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128515;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">05 Abril 2024</div>
+                <div class="timeline-description">
+                    Girasoles para la mas linda (primer día de pololos).
+                </div>
+                <img class="timeline-media" src="modulos/img/inicios/img-m07.jpg" alt="Aniversario 2024">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

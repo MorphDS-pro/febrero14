@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Fotos</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 220px);
+            gap: 15px;
+            padding: 20px;
+            text-align: center;
+            max-height: 80vh; /* Limitar la altura para que haya desplazamiento */
+            overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
+        }
+
+        .photo-frame {
+            background-color: #ff8fa3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            overflow: hidden;
+            height: 320px; /* Mantener altura fija para fotos y videos */
+        }
+
+        .photo-frame img {
+            max-width: 100%;
+            max-height: 89%;
+            object-fit: contain;
+            transition: transform 0.3s;
+            border-radius: 5px;
+        }
+
+        .photo-frame img:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-frame video {
+            width: 100%; 
+            height: 89%;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .gallery .photo-frame:nth-child(5) {
+            width: 440px;
+            height: 320px;
+        }
+
+
+
+
+        .photo-text {
+            margin-top: 10px;
+            background-color: #fff;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 14px;
+            overflow: hidden; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Nuestras Fotos Juntos</h2>
+    <div class="gallery">
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240114.jpg" alt="Foto 1">
+            <div class="photo-text">Foto 1</div>
+        </div>
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240310_121626 Copiar.jpg" alt="Foto 2">
+            <div class="photo-text">Foto 2</div>
+        </div>
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240316_143143 Copiar.jpg" alt="Foto 3">
+            <div class="photo-text">Foto 3</div>
+        </div>
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240318_103057 Copiar.jpg" alt="Foto 4">
+            <div class="photo-text">Foto 4</div>
+        </div>
+
+            <!-- FOTO 1 H -->
+
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/h20230218_img07.jpg" alt="Foto 5">
+            <div class="photo-text">Foto 5</div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240330_103438 Copiar.jpg" alt="Foto 6">
+            <div class="photo-text">Foto 6</div>
+        </div>
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240405_150432 Copiar.jpg" alt="Foto 7">
+            <div class="photo-text">Foto 7</div>
+        </div>
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240420_205121 Copiar.jpg" alt="Foto 8">
+            <div class="photo-text">Foto 8</div>
+        </div>
+        <div class="photo-frame">
+            <img src="modulos/img/fotos/20240611_210338 Copiar.jpg" alt="Foto 9">
+            <div class="photo-text">Foto 9</div>
+        </div>
+
+         <!-- VIDEO  1-->
+        <div class="photo-frame">
+            <video autoplay loop muted>
+                <source src="modulos/img/fotos/20231216_224547 Copiar.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Video 01</div>
+        </div>
+
+        <!-- VIDEO  2-->
+        <div class="photo-frame">
+            <video autoplay loop muted>
+                <source src="modulos/img/fotos/20240114.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Video 01</div>
+        </div>
+
+    </div>
+</body>
+</html>

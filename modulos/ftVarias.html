@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestras Fotos</title>
+  <style>
+
+    .gallery {
+  padding: 20px;
+  text-align: center;
+  height: 80vh; /* Área fija para la galería */
+  overflow-y: auto; /* Habilita el scroll interno si el contenido excede */
+}
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.photo-frame {
+  background-color: #ff8fa3;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  overflow: hidden;
+  height: 320px;
+  width: 220px; 
+}
+.photo-frame img {
+  max-width: 100%;
+  max-height: 89%;
+  object-fit: contain;
+  transition: transform 0.3s;
+  border-radius: 5px;
+}
+.photo-frame img:hover {
+  transform: scale(1.05);
+}
+.photo-frame video {
+  width: 100%;
+  height: 89%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.photo-text {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  overflow: hidden;
+}
+.row.five .photo-frame:last-child {
+  width: 440px; 
+}
+
+  </style>
+</head>
+<body>
+  <h2>Nuestras Fotos Juntos</h2>
+  <div class="gallery">
+  
+    <div class="row five">
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240114.jpg" alt="Foto 1">
+        <div class="photo-text">El mejor papá del mundo</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240310_121626 Copiar.jpg" alt="Foto 2">
+        <div class="photo-text">Hijo pio pio</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240316_143143 Copiar.jpg" alt="Foto 3">
+        <div class="photo-text">TJCK-34</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240318_103057 Copiar.jpg" alt="Foto 4">
+        <div class="photo-text">Payaso triste</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/h20230218_img07.jpg" alt="Foto 5">
+        <div class="photo-text">Almuerzo en curico</div>
+      </div>
+    </div>
+
+    <div class="row six">
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240330_103438 Copiar.jpg" alt="Foto 6">
+        <div class="photo-text">Felices 33 años</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240405_150432 Copiar.jpg" alt="Foto 7">
+        <div class="photo-text">Quieres pololear conmigo?</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240420_205121 Copiar.jpg" alt="Foto 8">
+        <div class="photo-text">Fabrizio Copano</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240611_210338 Copiar.jpg" alt="Foto 9">
+        <div class="photo-text">No tengo sueño</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240707_121927 Copiar.jpg" alt="Foto 10">
+        <div class="photo-text">Lupita o lunita</div>
+      </div>
+      <div class="photo-frame">
+        <img src="modulos/img/fotos/20240707_130140 Copiar.jpg" alt="Foto 11">
+        <div class="photo-text">Volando como un cajaro</div>
+      </div>
+    </div>
+
+    <div class="row five">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG_20250104_221540 Copiar.jpg" alt="Foto 12">
+          <div class="photo-text">Una mujer muy linda</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20230331-WA0011 Copiar.jpg" alt="Foto 13">
+          <div class="photo-text">Felices 32 años</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20230409-WA0005 Copiar.jpg" alt="Foto 14">
+          <div class="photo-text">Mickey</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20231209-WA0001 Copiar.jpg" alt="Foto 15">
+          <div class="photo-text">Crudos</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/h20231122_img25.jpg" alt="Foto 5">
+          <div class="photo-text">Cafeteria por la tarde</div>
+        </div>
+    </div>
+
+    <div class="row six">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20240122-WA0014 Copiar.jpg" alt="Foto 16">
+          <div class="photo-text">Armando el GIM</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20240210-WA0013 Copiar.jpg" alt="Foto 17">
+          <div class="photo-text">Cambio de look</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0037.jpg" alt="Foto 18">
+          <div class="photo-text">Depto más bonito del mundo</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20231007.jpg" alt="Foto 19">
+          <div class="photo-text">De paso</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0040.jpg" alt="Foto 20">
+          <div class="photo-text">Placebo</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0043.jpg" alt="Foto 21">
+          <div class="photo-text">Era hembra</div>
+        </div>
+    </div>
+
+    <div class="row five">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0045.jpg" alt="Foto 22">
+          <div class="photo-text">Días de piscina</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0046.jpg" alt="Foto 23">
+          <div class="photo-text">Primer año neuvo juntos</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0047.jpg" alt="Foto 24">
+          <div class="photo-text">Nini</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20231125_213519 Copiar.jpg" alt="Foto 25">
+          <div class="photo-text">Pablo herrera</div>
+        </div>
+        <div class="photo-frame">
+            <video autoplay loop muted>
+              <source src="modulos/img/fotos/hhvideo_20250119_194624 Copiar.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Video de piscina</div>
+        </div>
+    </div>
+
+    <div class="row six">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0050.jpg" alt="Foto 26">
+          <div class="photo-text">Perro Simón</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0051.jpg" alt="Foto 27">
+          <div class="photo-text">Día de paseo</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0054.jpg" alt="Foto 28">
+          <div class="photo-text">Cumpeo</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0055.jpg" alt="Foto 29">
+          <div class="photo-text">Un perito por Dichato</div>
+        </div>
+        <div class="photo-frame">
+          <video autoplay loop muted>
+            <source src="modulos/img/fotos/20231216_224547 Copiar.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+          </video>
+          <div class="photo-text">De Saloon</div>
+        </div>
+        <div class="photo-frame">
+          <video autoplay loop muted>
+            <source src="modulos/img/fotos/20240114.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+          </video>
+          <div class="photo-text">Los bunker</div>
+        </div>
+     </div>
+    
+
+    <div class="row six">
+        <div class="photo-frame">
+          <img src="" alt="Foto 30">
+          <div class="photo-text">Foto 6</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0061.jpg" alt="Foto 31">
+          <div class="photo-text">Edo Caroe</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0062.jpg" alt="Foto 32">
+          <div class="photo-text">Mañana de maquillaje</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0063.jpg" alt="Foto 33">
+          <div class="photo-text">Día de la mujer</div>
+        </div>
+        <div class="photo-frame">
+          <video autoplay loop muted>
+            <source src="modulos/img/fotos/20240330_212321 Copiar.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+          </video>
+          <div class="photo-text">La mejor piñata </div>
+        </div>
+        <div class="photo-frame">
+          <video autoplay loop muted>
+            <source src="modulos/img/fotos/bcd2eac07f9184e7524a9f139002e44e Copiar.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+          </video>
+          <div class="photo-text">Tarde de TikTok</div>
+        </div>
+    </div>
+
+    <div class="row six">
+        <div class="photo-frame">
+            <video autoplay loop muted>
+              <source src="modulos/img/fotos/v20221029_155443 Copiar.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Paseo en bicicleta</div>
+          </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0064.jpg" alt="Foto 34">
+          <div class="photo-text">El hijo de pequeño</div>
+        </div>
+        <div class="photo-frame">
+            <video autoplay loop muted>
+              <source src="modulos/img/fotos/VID_43770119_021037_014 Copiar.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Unas flores para ti.</div>
+          </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0065.jpg" alt="Foto 35">
+          <div class="photo-text">Caminando por parral</div>
+        </div>
+        <div class="photo-frame">
+            <video autoplay loop muted>
+              <source src="modulos/img/fotos/VID_44270301_094829_844 Copiar.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Alimentado</div>
+          </div>
+    </div>
+
+    <div class="row six">
+        <div class="photo-frame">
+            <video autoplay loop muted>
+              <source src="modulos/img/fotos/VID_44631123_014657_592 Copiar.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Día de safary</div>
+          </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0066.jpg" alt="Foto 36">
+          <div class="photo-text">Día en parral</div>
+        </div>
+        <div class="photo-frame">
+            <video autoplay loop muted>
+              <source src="modulos/img/fotos/VID_46600526_193026_004 Copiar.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Sol y lluvia</div>
+          </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0067.jpg" alt="Foto 37">
+          <div class="photo-text">Una chelita</div>
+        </div>
+        <div class="photo-frame">
+            <video autoplay loop muted>
+              <source src="modulos/img/fotos/VID_56261212_144159_533 Copiar.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+            <div class="photo-text">Miranda</div>
+        </div>
+    </div>
+
+    <div class="row five">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0070.jpg" alt="Foto 38">
+          <div class="photo-text">Trabajando</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0074.jpg" alt="Foto 39">
+          <div class="photo-text">En bici a trabajar</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0075.jpg" alt="Foto 40">
+          <div class="photo-text">La torta más bkn</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0076.jpg" alt="Foto 41">
+          <div class="photo-text">Sergio freire</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/h20240317_192427 Copiar.jpg" alt="Foto 42">
+          <div class="photo-text">Tomé</div>
+        </div>
+    </div>
+
+    <div class="row five">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/IMG-20250204-WA0077.jpg" alt="Foto 43">
+          <div class="photo-text">Pollo castillo</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/img-modulo4-ft08.jpg" alt="Foto 44">
+          <div class="photo-text">Día de piscina</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20221120_img04.jpg" alt="Foto 45">
+          <div class="photo-text">Una vueltita</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20230115_img06.jpg" alt="Foto 46">
+          <div class="photo-text">Parada para un helado</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/h20240406_173032 Copiar.jpg" alt="Foto 47">
+          <div class="photo-text">Primer paseo de pololos</div>
+        </div>
+    </div>
+
+    <div class="row five">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20230308_img10.jpg" alt="Foto 48">
+          <div class="photo-text">Feliz día</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20230408.jpg" alt="Foto 49">
+          <div class="photo-text">Almuerzo en tue</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20230505_145222 Copiar.jpg" alt="Foto 50">
+          <div class="photo-text">Pintora</div>
+        </div>
+        <div class="photo-frame">
+          <img src="" alt="Foto 51">
+          <div class="photo-text">Foto 51</div>
+        </div>
+        <div class="photo-frame">
+          <img src="" alt="Foto 52">
+          <div class="photo-text">Foto 52</div>
+        </div>
+    </div>
+
+    <div class="row six">
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20230520.jpg" alt="Foto 53">
+          <div class="photo-text">Paseando al simon</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20230716.jpg" alt="Foto 54">
+          <div class="photo-text">Foto Juntito</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20231002_210451 Copiar.jpg" alt="Foto 55">
+          <div class="photo-text">Saliendo sin llaves</div>
+        </div>
+        <div class="photo-frame">
+          <img src="modulos/img/fotos/v20231007_img22.jpg" alt="Foto 56">
+          <div class="photo-text">Paseo a Iloca-Duao</div>
+        </div>
+        <div class="photo-frame">
+          <video autoplay loop muted>
+            <source src="modulos/img/fotos/VID_169550903_200137_669 Copiar.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+          </video>
+          <div class="photo-text">Conciero Placebo</div>
+        </div>
+        <div class="photo-frame">
+            <img src="" alt="Foto 57">
+            <div class="photo-text">Foto 57</div>
+          </div>
+    </div>
+
+    </div>
+</body>
+</html>

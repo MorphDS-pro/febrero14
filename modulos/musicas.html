@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo - Nuestros Recuerdos Musicales</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e88e5;
+            font-size: 3em;
+            margin: 50px 0;
+            text-shadow: 2px 2px 5px rgba(30, 136, 229, 0.6);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            height: 600px; /* Altura fija para permitir la barra de desplazamiento */
+            overflow-y: scroll; /* Barra de desplazamiento vertical */
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #1e88e5;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item .timeline-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .timeline-item .timeline-date {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1e88e5;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .timeline-description {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .timeline-item .timeline-icon {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #1e88e5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: auto;
+            right: 50%;
+        }
+
+        .timeline-item .timeline-media {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline-item .timeline-content {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Línea de Tiempo - Nuestros Recuerdos Musicales 🎶</h2>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-icon">&#10084;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">14 Feb 2023</div>
+                <div class="timeline-description">
+                    Empezamos nuestra historia con una canción especial. La melodía que siempre nos unirá y nos recordará ese momento mágico.
+                </div>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                    Tu navegador no soporta el formato de audio.
+                </audio>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#127881;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">20 Mar 2023</div>
+                <div class="timeline-description">
+                    ¡Nuestro primer viaje juntos! Y de fondo, nuestra canción favorita que nos acompaña en cada aventura.
+                </div>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+                    Tu navegador no soporta el formato de audio.
+                </audio>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128154;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">10 Jun 2023</div>
+                <div class="timeline-description">
+                    La sorpresa: nuestra canción de compromiso. Un tema que será para siempre nuestro himno de amor.
+                </div>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mp3">
+                    Tu navegador no soporta el formato de audio.
+                </audio>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128525;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">25 Dic 2023</div>
+                <div class="timeline-description">
+                    Nuestra primera Navidad juntos, llena de canciones alegres que marcaron ese día especial.
+                </div>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mp3">
+                    Tu navegador no soporta el formato de audio.
+                </audio>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">&#128515;</div>
+            <div class="timeline-content">
+                <div class="timeline-date">04 Abr 2024</div>
+                <div class="timeline-description">
+                    ¡Un año de amor! Un año completo de recuerdos, celebrados con la canción que más nos une.
+                </div>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mp3">
+                    Tu navegador no soporta el formato de audio.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

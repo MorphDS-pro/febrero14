@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Libro de Mensajes</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #ff4081;
+      font-size: 2.5em;
+      margin: 50px 0;
+      text-shadow: 2px 2px 5px rgba(255, 64, 129, 0.6);
+    }
+    .message-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .message-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #ffebf0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .message-item .author {
+      font-weight: bold;
+      color: #ff4081;
+    }
+    .message-item .date {
+      font-style: italic;
+      color: #999;
+    }
+    .message-item .message-content {
+      margin-top: 10px;
+      color: #333;
+    }
+    .message-form {
+      margin-top: 40px;
+      background-color: #ff4081;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: white;
+    }
+    .message-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: #ff4081;
+      font-size: 1.2em;
+    }
+    .message-item ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .message-item ul li {
+      background-color: #f8bbd0;
+      margin-bottom: 8px;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Nuestro Libro de Mensajes de Amor 💌</h2>
+  <div class="message-container">
+    <h3>Mensajes Especiales</h3>
+    
+    <!-- Aquí se mostrarán las notas seleccionadas -->
+    <div id="messageDisplay"></div>
+    
+    <div class="message-form">
+      <h3>Selecciona tu Nota Especial</h3>
+      <select id="messageType">
+        <option value="">Selecciona una opción...</option>
+        <option value="Virtudes">10 Virtudes de nuestro amor</option>
+        <option value="Positivas">10 Cosas Positivas que amo de ti</option>
+        <option value="Frases">10 Frases Típicas de amor</option>
+      </select>
+    </div>
+  </div>
+
+<script src="js/mensajes.js" defer></script>
+
+
+</body>
+</html>
