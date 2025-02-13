@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz día amor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FF0000' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" type="image/svg+xml" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #ffe6ea, #ff9fcf);
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+        position: relative;
+      }
+
+      .heart {
+        position: absolute;
+        bottom: -10px;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        transform: rotate(-45deg);
+        animation: floatUp linear infinite;
+      }
+
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+      }
+
+      .heart::before {
+        top: -10px;
+        left: 0;
+      }
+
+      .heart::after {
+        left: 10px;
+        top: 0;
+      }
+
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) scale(1) rotate(-45deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) scale(0.5) rotate(-45deg);
+          opacity: 0;
+        }
+      }
+
+      .center-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px solid rgba(255, 105, 180, 0.7);
+        width: 80%; /* Hacerlo un poco más flexible */
+        max-width: 400px; /* Limitar el tamaño máximo */
+      }
+
+      .center-content h1 {
+        margin: 0 0 10px;
+        font-size: 2.8rem;
+        background: linear-gradient(45deg, #ff0000, #ff69b4, #ff1493);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: pulse 3s infinite;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .center-content p {
+        margin: 0 0 20px;
+        font-size: 1.2rem;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .input-group {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .input-group input[type="password"] {
+        padding: 10px;
+        font-size: 1rem;
+        border: 2px solid #ff69b4;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.8);
+        outline: none;
+        width: 70%; /* Ajustar el tamaño en pantallas pequeñas */
+      }
+
+      .input-group input[type="password"]:focus {
+        border-color: #ff0000;
+        box-shadow: 0 0 5px #ff69b4;
+      }
+
+      .center-content button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(45deg, #ff69b4, #ff0000);
+        color: white;
+        cursor: pointer;
+        margin-left: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+      }
+
+      .center-content button:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .center-content {
+          width: 90%; /* Ajusta el ancho en pantallas más pequeñas */
+          max-width: 350px;
+        }
+
+        .center-content h1 {
+          font-size: 2.2rem; /* Ajusta el tamaño del título */
+        }
+
+        .center-content p {
+          font-size: 1rem; /* Ajusta el tamaño del párrafo */
+        }
+
+        .input-group input[type="password"] {
+          width: 100%; /* Asegura que el input ocupe el 100% en pantallas pequeñas */
+        }
+
+        .center-content button {
+          width: 100%; /* Hace que el botón ocupe todo el ancho */
+          margin-left: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .center-content h1 {
+          font-size: 1.8rem; /* Ajuste aún más pequeño en pantallas muy pequeñas */
+        }
+
+        .center-content p {
+          font-size: 0.9rem;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="center-content">
+      <h1>Feliz dia amor</h1>
+      <p>Para ingresar a nuestro portafolio pon la fecha de nuestro aniversario como contraseña.</p>
+      <div class="input-group">
+        <input type="password" placeholder="Contraseña" id="passwordInput" />
+        <button type="button" id="loginButton">Ingresar ❤️</button>
+      </div>
+    </div>
+
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        document.body.appendChild(heart);
+        heart.style.left = Math.random() * 100 + "vw";
+        const duration = Math.random() * 2 + 4;
+        heart.style.animationDuration = duration + "s";
+        setTimeout(() => heart.remove(), duration * 1000);
+      }
+      setInterval(createHeart, 200);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBGSyQlXo4qXoz3oWKFxWHwedZ8JEc6LHY",
+        authDomain: "febrero-db3ff.firebaseapp.com",
+        projectId: "febrero-db3ff",
+        storageBucket: "febrero-db3ff.firebasestorage.app",
+        messagingSenderId: "516615451182",
+        appId: "1:516615451182:web:cba63f6e539862dbc6a5bf",
+        measurementId: "G-3VBP8NNT1N"
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      const loginButton = document.getElementById("loginButton");
+      loginButton.addEventListener("click", function () {
+        const password = document.getElementById("passwordInput").value;
+        const email = "amor@portfolio.com";
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            alert("¡Acceso concedido! Bienvenido a nuestro portafolio.");
+            window.location.href = "portafolio.html";
+          })
+          .catch((error) => {
+            alert("Contraseña incorrecta. Intenta de nuevo.");
+          });
+      });
+    </script>
+  </body>
+</html>

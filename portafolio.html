@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portafolio</title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #fce1e4;
+                color: #333;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                overflow: hidden;
+                position: relative;
+            }
+
+            header {
+                background-color: #ff5c8d; 
+                color: white;
+                text-align: center;
+                padding: 1.5rem;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+
+            .container {
+                display: flex;
+                flex: 1;
+            }
+
+            .sidebar {
+                width: 250px;
+                background-color: #ff8fa3; 
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .heart-container {
+                font-size: 2rem;
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            .heart-container i {
+                animation: latido 1.5s infinite;
+            }
+
+            @keyframes latido {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.2); }
+                100% { transform: scale(1); }
+            }
+
+            .menu {
+                width: 100%;
+            }
+
+            .menu a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                font-size: 1.2rem;
+                padding: 12px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                transition: background 0.3s;
+            }
+
+            .menu a i {
+                margin-right: 10px;
+            }
+
+            .menu a:hover {
+                background-color: #ff5c8d;
+            }
+
+            .main-content {
+                flex: 1;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+                margin: 20px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .main-content h2 {
+                color: #ff5c8d;
+                margin-bottom: 10px;
+            }
+
+            .main-content p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+
+            .floating-heart {
+                position: absolute;
+                bottom: 0;
+                font-size: 2rem;
+                color: #ff5c8d;
+                animation: floatHeart 5s ease-in-out infinite;
+            }
+
+            @keyframes floatHeart {
+                0% {
+                    bottom: -50px;
+                    opacity: 1;
+                }
+                100% {
+                    bottom: 100%;
+                    opacity: 0;
+                }
+            }
+
+            .floating-heart:nth-child(1) {
+                left: 10%;
+                animation-duration: 6s;
+                animation-delay: 0s;
+            }
+
+            .floating-heart:nth-child(2) {
+                left: 15%;
+                animation-duration: 7s;
+                animation-delay: 1s;
+            }
+
+            .floating-heart:nth-child(3) {
+                left: 20%;
+                animation-duration: 8s;
+                animation-delay: 2s;
+            }
+
+            .floating-heart:nth-child(4) {
+                left: 25%;
+                animation-duration: 9s;
+                animation-delay: 3s;
+            }
+
+            .floating-heart:nth-child(5) {
+                left: 30%;
+                animation-duration: 10s;
+                animation-delay: 4s;
+            }
+
+            .floating-heart:nth-child(6) {
+                left: 35%;
+                animation-duration: 11s;
+                animation-delay: 5s;
+            }
+
+            .floating-heart:nth-child(7) {
+                left: 40%;
+                animation-duration: 12s;
+                animation-delay: 6s;
+            }
+
+            .floating-heart:nth-child(8) {
+                left: 45%;
+                animation-duration: 13s;
+                animation-delay: 7s;
+            }
+
+            .floating-heart:nth-child(9) {
+                left: 50%;
+                animation-duration: 14s;
+                animation-delay: 8s;
+            }
+
+            .floating-heart:nth-child(10) {
+                left: 55%;
+                animation-duration: 15s;
+                animation-delay: 9s;
+            }
+
+            .floating-heart:nth-child(11) {
+                left: 60%;
+                animation-duration: 16s;
+                animation-delay: 10s;
+            }
+
+            .floating-heart:nth-child(12) {
+                left: 65%;
+                animation-duration: 17s;
+                animation-delay: 11s;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            Nuestro portafolio
+        </header>
+
+        <div class="container">
+
+            <nav class="sidebar">
+                <div class="heart-container" onclick="loadContent('modulos/sanValentin.html')">
+                    <i class="fas fa-heart"></i>
+                </div>
+                
+                <div class="menu">
+                    <a href="#" onclick="loadContent('modulos/ftInicios.html')"><i class="fas fa-home"></i> Nuestro inicio</a>
+                    <a href="#" onclick="loadContent('modulos/ftNosotros.html')"><i class="fas fa-camera"></i> Nuestras fotos juntos</a>
+                    <a href="#" onclick="loadContent('modulos/ftVarias.html')"><i class="fas fa-images"></i> Fotos de recuerdos</a>    
+                    <a href="#" onclick="loadContent('modulos/ftVarias.html')"><i class="fas fa-images"></i> Fotos de recuerdos</a>             
+                </div>
+            </nav>
+
+            <main class="main-content" id="main-content">
+                <h2>Bienvenido a nuestro portafolio</h2>
+            </main>
+        </div>
+
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+        <div class="floating-heart"><i class="fas fa-heart"></i></div>
+
+        <script>
+
+            function loadContent(page) {
+
+                fetch(page)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Error HTTP! Estado: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const mainContent = document.getElementById('main-content');
+                        mainContent.innerHTML = html;
+
+                        const oldScripts = mainContent.getElementsByTagName('script');
+                        for (let oldScript of oldScripts) {
+                            oldScript.remove();
+                        }
+
+                        const newScripts = [...mainContent.getElementsByTagName('script')];
+                        newScripts.forEach(script => {
+                            const newScript = document.createElement('script');
+                            if (script.src) {
+                                newScript.src = script.src;
+                                newScript.async = false; 
+                            } else {
+                                newScript.textContent = script.textContent;
+                            }
+                            document.body.appendChild(newScript);
+                        });
+                    }
+                )
+
+                .catch(error => console.error("Error al cargar la página:", error));
+            }
+
+
+        </script>
+
+    </body>
+</html>
