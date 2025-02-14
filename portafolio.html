@@ -6,7 +6,6 @@
         <title>Portafolio</title>
         <link rel="stylesheet" href="">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
         <style>
             * {
                 margin: 0;
@@ -285,7 +284,6 @@
             function loadContent(page) {
               const mainContent = document.getElementById('main-content');
               
-              // Si se solicita el contenido de San Valentín, se inserta directamente
               if (page === 'modulos/sanValentin.html') {
                 mainContent.innerHTML = `
                   <h2>¡Feliz San Valentín!</h2>
@@ -305,7 +303,6 @@
                   <p>¡Sigue siendo esa persona maravillosa que ilumina el mundo con su luz y su amor!</p>
                 `;
               } else {
-                // Para otros contenidos, se utiliza fetch
                 fetch(page)
                   .then(response => {
                     if (!response.ok) throw new Error(`Error HTTP! Estado: ${response.status}`);
@@ -346,6 +343,5 @@
             }
           </script>
           
-
     </body>
 </html>
