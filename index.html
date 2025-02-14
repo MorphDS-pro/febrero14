@@ -67,8 +67,8 @@
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.4);
         border: 2px solid rgba(255, 105, 180, 0.7);
-        width: 80%; /* Hacerlo un poco más flexible */
-        max-width: 400px; /* Limitar el tamaño máximo */
+        width: 80%;
+        max-width: 400px;
       }
 
       .center-content h1 {
@@ -84,7 +84,7 @@
       .center-content p {
         margin: 0 0 20px;
         font-size: 1.2rem;
-        color: #fff;
+        color: #1478d6;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
       }
 
@@ -102,7 +102,7 @@
         border-radius: 5px;
         background: rgba(255, 255, 255, 0.8);
         outline: none;
-        width: 70%; /* Ajustar el tamaño en pantallas pequeñas */
+        width: 70%;
       }
 
       .input-group input[type="password"]:focus {
@@ -133,34 +133,33 @@
         100% { transform: scale(1); }
       }
 
-      /* Media Queries */
       @media (max-width: 768px) {
         .center-content {
-          width: 90%; /* Ajusta el ancho en pantallas más pequeñas */
+          width: 90%;
           max-width: 350px;
         }
 
         .center-content h1 {
-          font-size: 2.2rem; /* Ajusta el tamaño del título */
+          font-size: 2.2rem;
         }
 
         .center-content p {
-          font-size: 1rem; /* Ajusta el tamaño del párrafo */
+          font-size: 1rem; 
         }
 
         .input-group input[type="password"] {
-          width: 100%; /* Asegura que el input ocupe el 100% en pantallas pequeñas */
+          width: 100%; 
         }
 
         .center-content button {
-          width: 100%; /* Hace que el botón ocupe todo el ancho */
+          width: 100%; 
           margin-left: 0;
         }
       }
 
       @media (max-width: 480px) {
         .center-content h1 {
-          font-size: 1.8rem; /* Ajuste aún más pequeño en pantallas muy pequeñas */
+          font-size: 1.8rem;
         }
 
         .center-content p {
@@ -220,7 +219,7 @@
     
       function calcularDiasRestantes() {
         const hoy = new Date();
-        const aniversario = new Date(2025, 3, 4); // 04-04-2025 (mes en JS es 0-indexed)
+        const aniversario = new Date(2025, 3, 4);
         return Math.ceil((aniversario - hoy) / (1000 * 60 * 60 * 24));
       }
     
@@ -241,7 +240,6 @@
         const password = document.getElementById("passwordInput").value;
         const email = "amor@portfolio.com";
     
-        // Mostrar el contenedor del spinner
         document.getElementById("spinner-container").style.display = "flex";
     
         firebase.auth().signInWithEmailAndPassword(email, password)
@@ -256,14 +254,12 @@
             mostrarMensaje("error", "Has ingresado mal la contraseña. Este es el formato DDMMYYYY, intenta nuevamente.");
           })
           .finally(() => {
-            // Ocultar el spinner después de finalizar el proceso
             setTimeout(() => {
               document.getElementById("spinner-container").style.display = "none";
             }, 1500);
           });
       });
     
-      // Estilos CSS para spinner y mensajes emergentes
       const styles = document.createElement("style");
       styles.innerHTML = `
         /* Contenedor emergente del spinner */
