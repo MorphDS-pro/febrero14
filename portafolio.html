@@ -198,6 +198,22 @@
                 animation-delay: 11s;
             }
         </style>
+        <!-- Scripts de Firebase (se pueden colocar antes o después de los estilos, pero deben cargarse antes del código que lo utiliza) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script>
+        // Configuración de Firebase
+        var firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "TU_AUTH_DOMAIN",
+            projectId: "TU_PROJECT_ID",
+            storageBucket: "TU_STORAGE_BUCKET",
+            messagingSenderId: "TU_MESSAGING_SENDER_ID",
+            appId: "TU_APP_ID"
+        };
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
     </head>
 
     <body>
@@ -216,7 +232,8 @@
                 <div class="menu">
                     <a href="#" onclick="loadContent('modulos/ftInicios.html')"><i class="fas fa-home"></i> Nuestro inicio</a>
                     <a href="#" onclick="loadContent('modulos/ftNosotros.html')"><i class="fas fa-camera"></i> Nuestras fotos juntos</a>
-                    <a href="#" onclick="loadContent('modulos/ftVarias.html')"><i class="fas fa-images"></i> Fotos de recuerdos</a>               
+                    <a href="#" onclick="loadContent('modulos/ftVarias.html')"><i class="fas fa-images"></i> Fotos de recuerdos</a>   
+                    <a href="#" onclick="cerrarSesion()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>            
                 </div>
             </nav>
 
@@ -239,9 +256,7 @@
         <div class="floating-heart"><i class="fas fa-heart"></i></div>
 
         <script>
-
             function loadContent(page) {
-
                 fetch(page)
                     .then(response => {
                         if (!response.ok) throw new Error(`Error HTTP! Estado: ${response.status}`);
@@ -250,12 +265,12 @@
                     .then(html => {
                         const mainContent = document.getElementById('main-content');
                         mainContent.innerHTML = html;
-
+        
                         const oldScripts = mainContent.getElementsByTagName('script');
                         for (let oldScript of oldScripts) {
                             oldScript.remove();
                         }
-
+        
                         const newScripts = [...mainContent.getElementsByTagName('script')];
                         newScripts.forEach(script => {
                             const newScript = document.createElement('script');
@@ -267,13 +282,19 @@
                             }
                             document.body.appendChild(newScript);
                         });
-                    }
-                )
-
-                .catch(error => console.error("Error al cargar la página:", error));
+                    })
+                    .catch(error => console.error("Error al cargar la página:", error));
             }
-
-
+        
+            function cerrarSesion() {
+                firebase.auth().signOut().then(() => {
+                    alert("Has cerrado sesión correctamente.");
+                    window.location.href = "index.html"; // Redirige a la página de inicio
+                }).catch((error) => {
+                    console.error("Error al cerrar sesión: ", error);
+                    alert("Hubo un problema al cerrar sesión. Intenta nuevamente.");
+                });
+            }
         </script>
 
     </body>
