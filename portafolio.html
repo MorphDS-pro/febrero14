@@ -107,6 +107,17 @@
                 line-height: 1.6;
             }
 
+            .main-content ol {
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+
+            .main-content li {
+                margin-bottom: 8px;
+            }
+
+
+
             .floating-heart {
                 position: absolute;
                 bottom: 0;
@@ -198,11 +209,10 @@
                 animation-delay: 11s;
             }
         </style>
-        <!-- Scripts de Firebase (se pueden colocar antes o después de los estilos, pero deben cargarse antes del código que lo utiliza) -->
+
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script>
-        // Configuración de Firebase
         var firebaseConfig = {
             apiKey: "TU_API_KEY",
             authDomain: "TU_AUTH_DOMAIN",
@@ -211,7 +221,6 @@
             messagingSenderId: "TU_MESSAGING_SENDER_ID",
             appId: "TU_APP_ID"
         };
-        // Inicializar Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
     </head>
@@ -219,7 +228,7 @@
     <body>
 
         <header>
-            Nuestro portafolio
+            Portafolio de la bella y el godi.
         </header>
 
         <div class="container">
@@ -238,8 +247,25 @@
             </nav>
 
             <main class="main-content" id="main-content">
-                <h2>Bienvenido a nuestro portafolio</h2>
-            </main>
+                <h2>¡Feliz San Valentín!</h2>
+                <p>Hoy celebramos todo lo que te hace única. Aquí tienes 10 razones que demuestran lo increíble que eres:</p>
+                <ol>
+                  <li><strong>Inteligencia y Generosidad:</strong> Tu brillante inteligencia se une a tu capacidad para ayudar a quien lo necesite, iluminando el camino de los demás.</li>
+                  <li><strong>Amistad Incondicional:</strong> Siempre estás junto a tus amigas, en las buenas y en las malas, ofreciendo apoyo y cariño sin reservas.</li>
+                  <li><strong>Apoyo Inquebrantable:</strong> Tu habilidad para levantar y apoyar a los que te rodean demuestra una empatía y compromiso admirables.</li>
+                  <li><strong>Amor por los Animales:</strong> A pesar de cualquier adversidad, demuestras un cariño inmenso hacia los animales, cuidándolos con ternura.</li>
+                  <li><strong>Alegría Familiar:</strong> La felicidad que compartes con tu familia convierte cada momento en una celebración de amor y unión.</li>
+                  <li><strong>Paciencia y Serenidad:</strong> Tu calma y paciencia transforman las dificultades en oportunidades para crecer y aprender.</li>
+                  <li><strong>Sonrisa que Ilumina:</strong> Tu sonrisa tiene el poder de disipar la tristeza y llenar de luz cada rincón.</li>
+                  <li><strong>Espíritu de Lucha:</strong> Afrontas cada desafío con determinación y fuerza, inspirando a quienes te conocen.</li>
+                  <li><strong>Calidez Humana:</strong> La empatía y el cariño que irradias hacen que todos se sientan comprendidos y valorados en tu presencia.</li>
+                  <li><strong>Espíritu Juguetón:</strong> Me encanta que disfrutes haciendo cosas que te hacen sentir niña, como pintar, jugar Sims y dejar volar tu creatividad.</li>
+
+                </ol>
+                <p>¡Sigue siendo esa persona maravillosa que ilumina el mundo con su luz y su amor!</p>
+              </main>
+              
+              
         </div>
 
         <div class="floating-heart"><i class="fas fa-heart"></i></div>
@@ -257,45 +283,69 @@
 
         <script>
             function loadContent(page) {
+              const mainContent = document.getElementById('main-content');
+              
+              // Si se solicita el contenido de San Valentín, se inserta directamente
+              if (page === 'modulos/sanValentin.html') {
+                mainContent.innerHTML = `
+                  <h2>¡Feliz San Valentín!</h2>
+                  <p>Hoy celebramos todo lo que te hace única. Aquí tienes 10 razones que demuestran lo increíble que eres:</p>
+                  <ol>
+                    <li><strong>Inteligencia y Generosidad:</strong> Tu brillante inteligencia se une a tu capacidad para ayudar a quien lo necesite, iluminando el camino de los demás.</li>
+                    <li><strong>Amistad Incondicional:</strong> Siempre estás junto a tus amigas, en las buenas y en las malas, ofreciendo apoyo y cariño sin reservas.</li>
+                    <li><strong>Apoyo Inquebrantable:</strong> Tu habilidad para levantar y apoyar a los que te rodean demuestra una empatía y compromiso admirables.</li>
+                    <li><strong>Amor por los Animales:</strong> A pesar de cualquier adversidad, demuestras un cariño inmenso hacia los animales, cuidándolos con ternura.</li>
+                    <li><strong>Alegría Familiar:</strong> La felicidad que compartes con tu familia convierte cada momento en una celebración de amor y unión.</li>
+                    <li><strong>Paciencia y Serenidad:</strong> Tu calma y paciencia transforman las dificultades en oportunidades para crecer y aprender.</li>
+                    <li><strong>Sonrisa que Ilumina:</strong> Tu sonrisa tiene el poder de disipar la tristeza y llenar de luz cada rincón.</li>
+                    <li><strong>Espíritu de Lucha:</strong> Afrontas cada desafío con determinación y fuerza, inspirando a quienes te conocen.</li>
+                    <li><strong>Calidez Humana:</strong> La empatía y el cariño que irradias hacen que todos se sientan comprendidos y valorados en tu presencia.</li>
+                    <li><strong>Espíritu Juguetón:</strong> Me encanta que disfrutes haciendo cosas que te hacen sentir niña, como pintar, jugar Sims y dejar volar tu creatividad.</li>
+                  </ol>
+                  <p>¡Sigue siendo esa persona maravillosa que ilumina el mundo con su luz y su amor!</p>
+                `;
+              } else {
+                // Para otros contenidos, se utiliza fetch
                 fetch(page)
-                    .then(response => {
-                        if (!response.ok) throw new Error(`Error HTTP! Estado: ${response.status}`);
-                        return response.text();
-                    })
-                    .then(html => {
-                        const mainContent = document.getElementById('main-content');
-                        mainContent.innerHTML = html;
-        
-                        const oldScripts = mainContent.getElementsByTagName('script');
-                        for (let oldScript of oldScripts) {
-                            oldScript.remove();
-                        }
-        
-                        const newScripts = [...mainContent.getElementsByTagName('script')];
-                        newScripts.forEach(script => {
-                            const newScript = document.createElement('script');
-                            if (script.src) {
-                                newScript.src = script.src;
-                                newScript.async = false; 
-                            } else {
-                                newScript.textContent = script.textContent;
-                            }
-                            document.body.appendChild(newScript);
-                        });
-                    })
-                    .catch(error => console.error("Error al cargar la página:", error));
+                  .then(response => {
+                    if (!response.ok) throw new Error(`Error HTTP! Estado: ${response.status}`);
+                    return response.text();
+                  })
+                  .then(html => {
+                    mainContent.innerHTML = html;
+          
+                    const oldScripts = mainContent.getElementsByTagName('script');
+                    for (let oldScript of oldScripts) {
+                      oldScript.remove();
+                    }
+          
+                    const newScripts = [...mainContent.getElementsByTagName('script')];
+                    newScripts.forEach(script => {
+                      const newScript = document.createElement('script');
+                      if (script.src) {
+                        newScript.src = script.src;
+                        newScript.async = false; 
+                      } else {
+                        newScript.textContent = script.textContent;
+                      }
+                      document.body.appendChild(newScript);
+                    });
+                  })
+                  .catch(error => console.error("Error al cargar la página:", error));
+              }
             }
-        
+            
             function cerrarSesion() {
-                firebase.auth().signOut().then(() => {
-                    alert("Has cerrado sesión correctamente.");
-                    window.location.href = "index.html"; // Redirige a la página de inicio
-                }).catch((error) => {
-                    console.error("Error al cerrar sesión: ", error);
-                    alert("Hubo un problema al cerrar sesión. Intenta nuevamente.");
-                });
+              firebase.auth().signOut().then(() => {
+                alert("Has cerrado sesión correctamente.");
+                window.location.href = "index.html";
+              }).catch((error) => {
+                console.error("Error al cerrar sesión: ", error);
+                alert("Hubo un problema al cerrar sesión. Intenta nuevamente.");
+              });
             }
-        </script>
+          </script>
+          
 
     </body>
 </html>
